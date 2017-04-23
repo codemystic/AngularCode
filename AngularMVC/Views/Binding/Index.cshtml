@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Binding";
+}
+
+<h2>Binding</h2>
+
+<html ng-app="mvcCRUDCtrl">
+<head>
+    <meta charset="utf-8" />
+    <title>Two way binding</title>
+</head>
+<body>
+    <div ng-controller="twoWayBindingController">
+        <input type="text" ng-model="name" ng-change="HideGreeting()" />
+        {{name}}
+        <br/>
+        <input type="button" value="Show Greeting" title="Show Greeting" ng-click="ShowGreeting()" />
+        <label ng-show="showGreeting">Welcome {{name}}!</label>
+    </div>
+</body>
+</html>
+
